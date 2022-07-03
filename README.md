@@ -1,5 +1,5 @@
 # ut_media_project
-ut_medium(仮名) 名前の代替案(ut coverage, ut news report, ut insight, akamon report, komaba
+ut_medium(仮名) 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
