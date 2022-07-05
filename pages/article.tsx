@@ -26,17 +26,6 @@ const Home: NextPage = () => {
   });
   const [loginName, setLoginName] = useState("森鴎外");
 
-  const loginSwitchChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if(event.target.checked){
-      setLoginName("森鴎外")
-    }else{
-      setLoginName("");
-    }
-  };
-  const loginTextFieldChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setLoginName(event.target.value);
-  };
-
   return (
     <div>
       <Container fixed>
@@ -46,7 +35,13 @@ const Home: NextPage = () => {
               control={
                 <Switch
                   checked={loginName !== ""}
-                  onChange={loginSwitchChanged}
+                  onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                    if(event.target.checked){
+                      setLoginName("森鴎外")
+                    }else{
+                      setLoginName("");
+                    }
+                  }}
                 />
               }
               label="ログイン(テスト用)"
@@ -55,7 +50,9 @@ const Home: NextPage = () => {
               variant="standard"
               label="ユーザー名(テスト用)"
               value={loginName}
-              onChange={loginTextFieldChanged}
+              onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
+                setLoginName(event.target.value);
+              }}
             />
           </Grid>
           <Grid item xs={12}>
