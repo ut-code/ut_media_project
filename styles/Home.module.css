@@ -22,7 +22,7 @@
 }
 
 .footer a {
-  display: flex;
+  display: flexs;
   justify-content: center;
   align-items: center;
   flex-grow: 1;

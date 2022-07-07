@@ -23,7 +23,7 @@ class Article{
 class Review{
   author: string = "";
   content: string = "";
-  nameDisplay: bool = false;
+  nameDisplay: boolean = false;
   // avatar: ??? = ???;
 }
 
