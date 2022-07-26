@@ -1,17 +1,16 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 // import styles from '../styles/Home.module.css'
-import {useState} from 'react'
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
 import TextField from '@mui/material/TextField';
-import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import { useState } from 'react';
 
 
 class Article{
@@ -125,7 +124,7 @@ const Home: NextPage = () => {
           </Grid>
 
           {reviews.map((rev: Review) => (
-            <Paper sx={{width:'100%', padding:2}}>
+            <Paper key={rev.content} sx={{width:'100%', padding:2}}>
               <Grid container spacing={2} alignItems="center">
                 <Grid item>
                   <Avatar>
